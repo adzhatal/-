@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+std::string getDistrictName(int districtNumber) {
+    switch (districtNumber) {
+        case 1: return "Central Administrative Okrug (CAO)";
+        case 2: return "Southeastern Administrative Okrug (SEAD)";
+        case 3: return "Eastern Administrative Okrug (EAD)";
+        case 4: return "Northeastern Administrative Okrug (NEAD)";
+        case 5: return "Northern Administrative Okrug (NAD)";
+        case 6: return "Western Administrative Okrug (WAD)";
+        case 7: return "Southwestern Administrative Okrug (SWAD)";
+        case 8: return "Southern Administrative Okrug (SAD)";
+        case 9: return "Northwestern Administrative Okrug (NWAD)";
+        case 10: return "Zelenograd Administrative Okrug";
+        case 11: return "Troitsky Administrative Okrug";
+        case 12: return "Novomoskovsky Administrative Okrug";
+        default: return "Invalid district number";
+    }
+}
+
+int main() {
+    int districtNumber;
+    
+    std::cout << "Enter the district number of Moscow (1-12): ";
+    std::cin >> districtNumber;
+
+    std::string districtName = getDistrictName(districtNumber);
+    std::cout << "The name of the district is: " << districtName << std::endl;
+
+    return 0;
